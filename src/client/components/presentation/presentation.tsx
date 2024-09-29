@@ -10,7 +10,7 @@ import {
 	uniqueId,
 } from 'tldraw'
 
-const WORKER_URL = `https://presentations-1b2c50435eb1.herokuapp.com`
+const WORKER_URL = `https://presentations-6931b8155cce.herokuapp.com`
 
 
 function Presentation() {
@@ -92,91 +92,4 @@ async function unfurlBookmarkUrl({ url }: { url: string }): Promise<TLBookmarkAs
 	return asset
 }
 
-export default Presentation
-
-
-// import React from 'react';
-// import { Tldraw, track, useEditor } from 'tldraw';
-// import 'tldraw/tldraw.css';
-// import { Box, Typography } from '@mui/material';
-// import { useParams } from 'react-router-dom';
-// import { useSyncStore } from '../../utils/useSyncStore';
-
-// const Presentation = ({ joinedUsers }) => {
-
-//   const HOST_URL = 'ws://localhost:5173'
-
-//     const { id } = useParams();
-
-//     const store = useSyncStore({
-//       roomId: id,
-//       hostUrl: HOST_URL,
-//     })
-
-
-//   return (
-//     <div style={{ display: 'flex', height: '100vh', width: '100vw' }}>
-//       <div style={{ width: '80vw' }}>
-//         <Tldraw
-//             autoFocus
-//             store={store}
-//             components={{
-//               SharePanel: NameEditor,
-//             }}
-//         />
-//       </div>
-
-//       <Box
-//         sx={{
-//           width: '20vw',
-//           padding: '16px',
-//           bgcolor: '#F9FAFB',
-//           borderLeft: '1px solid #ccc',
-//           boxShadow: 24,
-//           overflowY: 'auto',
-//         }}
-//       >
-//         <Typography variant="h6">Users Joined:</Typography>
-//         {joinedUsers.length > 0 ? (
-//           <ul>
-//             {joinedUsers.map((user, index) => (
-//               <li key={index}>{user}</li>
-//             ))}
-//           </ul>
-//         ) : (
-//           <Typography>No users joined yet</Typography>
-//         )}
-//       </Box>
-//     </div>
-//   );
-// };
-
-// export default Presentation;
-
-// const NameEditor = track(() => {
-// 	const editor = useEditor()
-
-// 	const { color, name } = editor.user.getUserPreferences()
-
-// 	return (
-// 		<div style={{ pointerEvents: 'all', display: 'flex' }}>
-// 			<input
-// 				type="color"
-// 				value={color}
-// 				onChange={(e) => {
-// 					editor.user.updateUserPreferences({
-// 						color: e.currentTarget.value,
-// 					})
-// 				}}
-// 			/>
-// 			<input
-// 				value={name}
-// 				onChange={(e) => {
-// 					editor.user.updateUserPreferences({
-// 						name: e.currentTarget.value,
-// 					})
-// 				}}
-// 			/>
-// 		</div>
-// 	)
-// })
+export default Presentation;
