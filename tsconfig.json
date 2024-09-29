@@ -1,0 +1,13 @@
+{
+	"extends": "../../internal/config/tsconfig.base.json",
+	"include": ["src", "scripts", "vite.config.mts"],
+	"exclude": ["node_modules", "dist", ".tsbuild*"],
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"jsx": "react",
+		"noEmit": true,
+		"emitDeclarationOnly": false,
+		"types": ["bun", "node"]
+	},
+	"references": []
+}
