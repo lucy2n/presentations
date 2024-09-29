@@ -10,7 +10,7 @@ import {
 	uniqueId,
 } from 'tldraw'
 
-const WORKER_URL = `http://localhost:5858`
+const WORKER_URL = `https://presentations-1b2c50435eb1.herokuapp.com`
 
 
 function Presentation() {
